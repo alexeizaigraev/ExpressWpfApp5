@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DrmDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentDep" Type="nvarchar(max)" />
+          <Property Name="RegionDep" Type="nvarchar(max)" />
+          <Property Name="DistrictRegionDep" Type="nvarchar(max)" />
+          <Property Name="DistrictCityDep" Type="nvarchar(max)" />
+          <Property Name="CityTypeDep" Type="nvarchar(max)" />
+          <Property Name="CityDep" Type="nvarchar(max)" />
+          <Property Name="StreetDep" Type="nvarchar(max)" />
+          <Property Name="StreetTypeDep" Type="nvarchar(max)" />
+          <Property Name="HousDep" Type="nvarchar(max)" />
+          <Property Name="PostIndexDep" Type="nvarchar(max)" />
+          <Property Name="PartnerDep" Type="nvarchar(max)" />
+          <Property Name="StatusDep" Type="nvarchar(max)" />
+          <Property Name="RegisterDep" Type="nvarchar(max)" />
+          <Property Name="EdrpouDep" Type="nvarchar(max)" />
+          <Property Name="AddressDep" Type="nvarchar(max)" />
+          <Property Name="PartnerNameDep" Type="nvarchar(max)" />
+          <Property Name="IdTerminalDep" Type="nvarchar(max)" />
+          <Property Name="KoatuDep" Type="nvarchar(max)" />
+          <Property Name="TaxIdDep" Type="nvarchar(max)" />
+          <Property Name="Koatu2Dep" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="T_Logi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentLogi" Type="nvarchar(max)" />
+          <Property Name="TermialLogi" Type="nvarchar(max)" />
+          <Property Name="ModelLogi" Type="nvarchar(max)" />
+          <Property Name="SerialNumberLogi" Type="nvarchar(max)" />
+          <Property Name="AddressLogi" Type="nvarchar(max)" />
+          <Property Name="DataLogLogi" Type="nvarchar(max)" />
+          <Property Name="KindLogi" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="T_Otbor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TermOtbor" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DepOtbor" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Terminal">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentTerm" Type="nvarchar(max)" />
+          <Property Name="TermialTerm" Type="nvarchar(max)" />
+          <Property Name="ModelTerm" Type="nvarchar(max)" />
+          <Property Name="SerialNumberTerm" Type="nvarchar(max)" />
+          <Property Name="DateManufactureTerm" Type="nvarchar(max)" />
+          <Property Name="SoftTerm" Type="nvarchar(max)" />
+          <Property Name="ProducerTerm" Type="nvarchar(max)" />
+          <Property Name="RneRroTerm" Type="nvarchar(max)" />
+          <Property Name="SealingTerm" Type="nvarchar(max)" />
+          <Property Name="FiscalNumberTerm" Type="nvarchar(max)" />
+          <Property Name="OroSerialTerm" Type="nvarchar(max)" />
+          <Property Name="OroNumberTerm" Type="nvarchar(max)" />
+          <Property Name="TicketSerialTerm" Type="nvarchar(max)" />
+          <Property Name="Ticket1sheetTerm" Type="nvarchar(max)" />
+          <Property Name="TicketNumberTerm" Type="nvarchar(max)" />
+          <Property Name="SendingTerm" Type="nvarchar(max)" />
+          <Property Name="BooksArhivTerm" Type="nvarchar(max)" />
+          <Property Name="TicketsArhivTerm" Type="nvarchar(max)" />
+          <Property Name="ToRroTerm" Type="nvarchar(max)" />
+          <Property Name="OwnerRroTerm" Type="nvarchar(max)" />
+          <Property Name="RegisterTerm" Type="nvarchar(max)" />
+          <Property Name="FinishTerm" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="DrmDbModelStoreContainer">
+          <EntitySet Name="T_Department" EntityType="Self.T_Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Logi" EntityType="Self.T_Logi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Otbor" EntityType="Self.T_Otbor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Terminal" EntityType="Self.T_Terminal" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DrmDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="T_Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RegionDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DistrictRegionDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DistrictCityDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CityTypeDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CityDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StreetDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StreetTypeDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HousDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PostIndexDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StatusDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RegisterDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EdrpouDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddressDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerNameDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IdTerminalDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KoatuDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TaxIdDep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Koatu2Dep" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_Logi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentLogi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TermialLogi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ModelLogi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SerialNumberLogi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLogi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DataLogLogi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KindLogi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T_Otbor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TermOtbor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DepOtbor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Terminal">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TermialTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ModelTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SerialNumberTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateManufactureTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SoftTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProducerTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RneRroTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SealingTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FiscalNumberTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OroSerialTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OroNumberTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TicketSerialTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ticket1sheetTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TicketNumberTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SendingTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BooksArhivTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TicketsArhivTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ToRroTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerRroTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RegisterTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FinishTerm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DrmDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_Department" EntityType="Self.T_Department" />
+          <EntitySet Name="T_Logi" EntityType="Self.T_Logi" />
+          <EntitySet Name="T_Otbor" EntityType="Self.T_Otbor" />
+          <EntitySet Name="T_Terminal" EntityType="Self.T_Terminal" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DrmDbModelStoreContainer" CdmEntityContainer="DrmDbEntities">
+          <EntitySetMapping Name="T_Department">
+            <EntityTypeMapping TypeName="DrmDbModel.T_Department">
+              <MappingFragment StoreEntitySet="T_Department">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DepartmentDep" ColumnName="DepartmentDep" />
+                <ScalarProperty Name="RegionDep" ColumnName="RegionDep" />
+                <ScalarProperty Name="DistrictRegionDep" ColumnName="DistrictRegionDep" />
+                <ScalarProperty Name="DistrictCityDep" ColumnName="DistrictCityDep" />
+                <ScalarProperty Name="CityTypeDep" ColumnName="CityTypeDep" />
+                <ScalarProperty Name="CityDep" ColumnName="CityDep" />
+                <ScalarProperty Name="StreetDep" ColumnName="StreetDep" />
+                <ScalarProperty Name="StreetTypeDep" ColumnName="StreetTypeDep" />
+                <ScalarProperty Name="HousDep" ColumnName="HousDep" />
+                <ScalarProperty Name="PostIndexDep" ColumnName="PostIndexDep" />
+                <ScalarProperty Name="PartnerDep" ColumnName="PartnerDep" />
+                <ScalarProperty Name="StatusDep" ColumnName="StatusDep" />
+                <ScalarProperty Name="RegisterDep" ColumnName="RegisterDep" />
+                <ScalarProperty Name="EdrpouDep" ColumnName="EdrpouDep" />
+                <ScalarProperty Name="AddressDep" ColumnName="AddressDep" />
+                <ScalarProperty Name="PartnerNameDep" ColumnName="PartnerNameDep" />
+                <ScalarProperty Name="IdTerminalDep" ColumnName="IdTerminalDep" />
+                <ScalarProperty Name="KoatuDep" ColumnName="KoatuDep" />
+                <ScalarProperty Name="TaxIdDep" ColumnName="TaxIdDep" />
+                <ScalarProperty Name="Koatu2Dep" ColumnName="Koatu2Dep" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Logi">
+            <EntityTypeMapping TypeName="DrmDbModel.T_Logi">
+              <MappingFragment StoreEntitySet="T_Logi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DepartmentLogi" ColumnName="DepartmentLogi" />
+                <ScalarProperty Name="TermialLogi" ColumnName="TermialLogi" />
+                <ScalarProperty Name="ModelLogi" ColumnName="ModelLogi" />
+                <ScalarProperty Name="SerialNumberLogi" ColumnName="SerialNumberLogi" />
+                <ScalarProperty Name="AddressLogi" ColumnName="AddressLogi" />
+                <ScalarProperty Name="DataLogLogi" ColumnName="DataLogLogi" />
+                <ScalarProperty Name="KindLogi" ColumnName="KindLogi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Otbor">
+            <EntityTypeMapping TypeName="DrmDbModel.T_Otbor">
+              <MappingFragment StoreEntitySet="T_Otbor">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TermOtbor" ColumnName="TermOtbor" />
+                <ScalarProperty Name="DepOtbor" ColumnName="DepOtbor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Terminal">
+            <EntityTypeMapping TypeName="DrmDbModel.T_Terminal">
+              <MappingFragment StoreEntitySet="T_Terminal">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DepartmentTerm" ColumnName="DepartmentTerm" />
+                <ScalarProperty Name="TermialTerm" ColumnName="TermialTerm" />
+                <ScalarProperty Name="ModelTerm" ColumnName="ModelTerm" />
+                <ScalarProperty Name="SerialNumberTerm" ColumnName="SerialNumberTerm" />
+                <ScalarProperty Name="DateManufactureTerm" ColumnName="DateManufactureTerm" />
+                <ScalarProperty Name="SoftTerm" ColumnName="SoftTerm" />
+                <ScalarProperty Name="ProducerTerm" ColumnName="ProducerTerm" />
+                <ScalarProperty Name="RneRroTerm" ColumnName="RneRroTerm" />
+                <ScalarProperty Name="SealingTerm" ColumnName="SealingTerm" />
+                <ScalarProperty Name="FiscalNumberTerm" ColumnName="FiscalNumberTerm" />
+                <ScalarProperty Name="OroSerialTerm" ColumnName="OroSerialTerm" />
+                <ScalarProperty Name="OroNumberTerm" ColumnName="OroNumberTerm" />
+                <ScalarProperty Name="TicketSerialTerm" ColumnName="TicketSerialTerm" />
+                <ScalarProperty Name="Ticket1sheetTerm" ColumnName="Ticket1sheetTerm" />
+                <ScalarProperty Name="TicketNumberTerm" ColumnName="TicketNumberTerm" />
+                <ScalarProperty Name="SendingTerm" ColumnName="SendingTerm" />
+                <ScalarProperty Name="BooksArhivTerm" ColumnName="BooksArhivTerm" />
+                <ScalarProperty Name="TicketsArhivTerm" ColumnName="TicketsArhivTerm" />
+                <ScalarProperty Name="ToRroTerm" ColumnName="ToRroTerm" />
+                <ScalarProperty Name="OwnerRroTerm" ColumnName="OwnerRroTerm" />
+                <ScalarProperty Name="RegisterTerm" ColumnName="RegisterTerm" />
+                <ScalarProperty Name="FinishTerm" ColumnName="FinishTerm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
